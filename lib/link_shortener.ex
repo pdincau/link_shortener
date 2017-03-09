@@ -1,7 +1,15 @@
 defmodule LinkShortener do
+
+  @moduledoc """
+    Shorten you links using Google url-shortener API.
+  """
+
   use Application
   use HTTPoison.Base
 
+  @doc """
+    Starts the application.
+  """
   def start(_type, _args) do
     LinkShortener.Supervisor.start_link
   end
