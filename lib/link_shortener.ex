@@ -6,7 +6,7 @@ defmodule LinkShortener do
     LinkShortener.Supervisor.start_link
   end
 
-  def process_url(fields) do
+  defp process_url(fields) do
     url = "https://www.googleapis.com/urlshortener/v1/url?fields=" <> fields <> "&key=" <> key()
     url
   end
